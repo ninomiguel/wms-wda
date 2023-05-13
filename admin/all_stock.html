@@ -3,10 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<!-- Bootstrap 4 CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Warehouse | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -29,8 +25,6 @@
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
-
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -260,11 +254,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Outgoing Stocks Report</h1>
+            <h1 class="m-0">Dashboard</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Information About Outgoing Stocks Report</a></li>
+              <li class="breadcrumb-item"><a href="#">Information About Stock Notification</a></li>
               
             </ol>
           </div><!-- /.col -->
@@ -273,35 +267,136 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              
-              <div class="card-body">
-                <canvas id="salesVolumeChart"></canvas>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Minimal Edit Stock Notifications</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Stock Limit</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="10,000">
+                    </div>
+                    
+                    
+                  </div>
+                  <!-- /.card-body -->
+  
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Update Data</button>
+                  </div>
+                </form>
               </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="row mt-4">
-                <div class="col-md-12">
-            <div class="card">
+              <!-- /.card -->
+            
+  
               
-              <div class="card-body">
-                <canvas id="revenueChart"></canvas>
-              </div>
+
+
+
+
+
+
+             
+              <!-- /.card -->
+  
             </div>
+            
+            <!--/.col (right) -->
           </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </section>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Low Stocks:</h3>
         </div>
-        
-      </div><!-- /.container-fluid -->
-  </section>
-      
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width: 10px">#</th>
+                <th>Items</th>
+                <th style="width: 650px">Low Stocks</th>
+                <th style="width: 150px">Stock Left</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>Jumbo Bag Union Ultra Strength 50</td>
+                <td>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-primary">1,000</span></td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>Jumbo Bag Union Super Strength 40</td>
+                <td>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-warning" style="width: 30%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-warning">3,000</span></td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td>Jumbo Bag Union Extra Strength 40</td>
+                <td>
+                  <div class="progress progress-xs progress-striped active">
+                    <div class="progress-bar bg-danger" style="width: 50%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-danger">5,000</span></td>
+              </tr>
+              <tr>
+                <td>4.</td>
+                <td>Sling Bag Union Super Strength 40</td>
+                <td>
+                  <div class="progress progress-xs progress-striped active">
+                    <div class="progress-bar bg-info" style="width: 20%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-info">2,000</span></td>
+              </tr>
+              <tr>
+                <td>5.</td>
+                <td>Sling Bag Union Extra Strength 40</td>
+                <td>
+                  <div class="progress progress-xs progress-striped active">
+                    <div class="progress-bar bg-success" style="width: 50%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-success">5,000</span></td>
+              </tr>
+              <tr>
+                <td>6.</td>
+                <td>Sling Bag Union Ultra Strength 50</td>
+                <td>
+                  <div class="progress progress-xs progress-striped active">
+                    <div class="progress-bar bg-secondary" style="width: 60%"></div>
+                  </div>
+                </td>
+                <td><span class="badge bg-secondary">6,000</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -319,7 +414,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
 
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
@@ -352,53 +446,8 @@
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<!-- <script src="../dist/js/demo.js"></script> -->
+<script src="../dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
-
-
-
-<script>
-  // Sales volume by product chart
-  var salesVolumeChart = new Chart(document.getElementById("salesVolumeChart"), {
-    type: 'bar',
-    data: {
-      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-      datasets: [{
-        label: "Cement Items",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-        data: [500, 300, 100, 500, 200, 600]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Outgoing Stocks'
-      }
-    }
-  });
-
-  // Revenue by product chart
-  var revenueChart = new Chart(document.getElementById("revenueChart"), {
-    type: 'pie',
-    data: {
-      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-      datasets: [{
-        label: "Revenue",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-        data: [500, 300, 100, 500, 200, 600]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Outgoing Stocks'
-      }
-    }
-  });
-
-</script>
-
-
 </body>
 </html>
