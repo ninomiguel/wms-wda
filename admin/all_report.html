@@ -4,8 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Warehouse | Outgoing</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- Bootstrap 4 CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <title>Warehouse | Analytics Report</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -27,6 +30,8 @@
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -256,11 +261,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Outgoing Stocks</h1>
+            <h1 class="m-0">Analytics Stocks Report</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Information About Outgoing Stocks</a></li>
+              <li class="breadcrumb-item"><a href="#">Information About Analytics Stocks Report</a></li>
               
             </ol>
           </div><!-- /.col -->
@@ -271,137 +276,61 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-12">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
               <div class="card">
-                <div class="card-header">
-                  <h3 class="card-title">View Data Outgoing Stocks</h3>
-  
-                  <div class="card-tools">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-  
-                      <div class="input-group-append">
-                        <button type="submit" class="btn btn-default">
-                          <i class="fas fa-search"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
+                
+                <div class="card-body">
+                  <canvas id="salesVolumeChart"></canvas>
                 </div>
-                <!-- /.card-header -->
-                <div class="card-body table-responsive p-0">
-                  <table class="table table-hover text-nowrap">
-                    <thead>
-                      <tr>
-                        <th>DR#</th>
-                        <th>Description</th>
-                        <th>Type</th>
-                        
-                        <th>Quantity</th>
-                        <th>Customer</th>
-                        <th>Date</th>
-                        <th>Action</th>
-
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1221</td>
-                        <td>Union Ultra Strength 50</td>
-                        <td>Jumbo Bag Type 1</td>
-                        <td><span class="tag tag-success">100</span></td>
-                        <td>Hardware One</td>
-                        <td>Created: 17 May 2023 21:03
-                            <br>
-                            Last modified: 17 May 2023 21:03</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>1222</td>
-                        <td>Union Super Strength 40</td>
-                        <td>Jumbo Bag Type 1P</td>
-                        <td><span class="tag tag-warning">300</span></td>
-                        <td>Hardware Two</td>
-                        <td>Created: 17 May 2023 21:01
-                            <br>
-                            Last modified: 17 May 2023 21:01</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>1223</td>
-                        <td>Union Extra Strength 40</td>
-                        <td>Jumbo Bag Type 1P</td>
-                        <td><span class="tag tag-primary">500</span></td>
-                        <td>Hardware Three</td>
-                        <td>Created: 17 May 2023 21:00
-                            <br>
-                            Last modified: 17 May 2023 21:00</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>1224</td>
-                        <td>Union Super Strength 40</td>
-                        <td>Sling Bag Type 1P</td>
-                        <td><span class="tag tag-danger">200</span></td>
-                        <td>Hardware Four</td>
-                        <td>Created: 17 May 2023 21:04
-                            <br>
-                            Last modified: 17 May 2023 21:19</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>1225</td>
-                        <td>Union Extra Strength 40</td>
-                        <td>Sling Bag Type 1P</td>
-                        <td><span class="tag tag-danger">500</span></td>
-                        <td>Hardware Five</td>
-                        <td>Created: 17 May 2023 21:02
-                            <br>
-                            Last modified: 17 May 2023 21:02</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                      <tr>
-                        <td>1226</td>
-                        <td>Union Ultra Strength 50</td>
-                        <td>Sling Bag Type 1</td>
-                        <td><span class="tag tag-danger">600</span></td>
-                        <td>Hardware Six</td>
-                        <td>Created: 17 May 2023 20:57 <br>
-                            Last modified: 17 May 2023 20:57</td>
-                        <td><a href="add_outgoing.html" class="btn btn-success"><i class="fa-regular fa-square-plus"></i></a>
-                          <a href="edit_outgoing.html" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                          <a onclick="return confirm('Are you sure you want to delete this record?');" href="" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <!-- /.card-body -->
               </div>
-              <!-- /.card -->
+            </div>
+            
+          </div>
+          <div class="row mt-4">
+                  <div class="col-md-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <canvas id="revenueChart"></canvas>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- /.row -->
-        <!-- /.row (main row) -->
-      </div><!-- /.container-fluid -->
+          
+        </div><!-- /.container-fluid -->
     </section>
 
 
-
-
-    <!-- /.content -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <canvas id="salesVolumeChart2"></canvas>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="row mt-4">
+                  <div class="col-md-12">
+              <div class="card">
+                
+                <div class="card-body">
+                  <canvas id="revenueChart2"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div><!-- /.container-fluid -->
+    </section>
+      
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -419,6 +348,7 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+
 
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
@@ -451,8 +381,94 @@
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../dist/js/demo.js"></script>
+<!-- <script src="../dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
+
+<script>
+  // Sales volume by product chart
+  var salesVolumeChart = new Chart(document.getElementById("salesVolumeChart"), {
+    type: 'bar',
+    data: {
+      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
+      datasets: [{
+        label: "Cement Items",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
+        data: [5000, 3000, 1000, 5000, 200, 6000]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Incoming Stocks'
+      }
+    }
+  });
+
+  // Revenue by product chart
+  var revenueChart = new Chart(document.getElementById("revenueChart"), {
+    type: 'pie',
+    data: {
+      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
+      datasets: [{
+        label: "Revenue",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
+        data: [5000, 3000, 1000, 5000, 200, 6000]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Incoming Stocks'
+      }
+    }
+  });
+
+</script>
+
+
+<script>
+    // Sales volume by product chart
+    var salesVolumeChart = new Chart(document.getElementById("salesVolumeChart2"), {
+      type: 'bar',
+      data: {
+        labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
+        datasets: [{
+          label: "Cement Items",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
+          data: [500, 300, 100, 500, 200, 600]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Outgoing Stocks'
+        }
+      }
+    });
+  
+    // Revenue by product chart
+    var revenueChart = new Chart(document.getElementById("revenueChart2"), {
+      type: 'pie',
+      data: {
+        labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
+        datasets: [{
+          label: "Revenue",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
+          data: [500, 300, 100, 500, 200, 600]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Outgoing Stocks'
+        }
+      }
+    });
+  
+  </script>
+
+
+
 </body>
 </html>
