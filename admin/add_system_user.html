@@ -3,12 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<!-- Bootstrap 4 CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  
-  <title>Warehouse | Analytics Report</title>
+  <title>Warehouse | Add User</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -30,8 +25,6 @@
   <link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
-
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -261,11 +254,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Analytics Stocks Report</h1>
+            <h1 class="m-0">Add User</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Information About Analytics Stocks Report</a></li>
+              <!-- <li class="breadcrumb-item"><a href="#">Add Stock</a></li> -->
               
             </ol>
           </div><!-- /.col -->
@@ -274,63 +267,84 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                
-                <div class="card-body">
-                  <canvas id="salesVolumeChart"></canvas>
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Add User</h3>
                 </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Username</label>
+                      <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Password</label>
+                      <input type="text" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Full Name</label>
+                      <input type="text" class="form-control" placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Address</label>
+                      <input type="text" class="form-control" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Phone NUmber</label>
+                      <input type="text" class="form-control" placeholder="Contact Number">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1">System User</label>
+                      <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Administrator</option>
+                        <option>Supplier/Office</option>
+                        <option>Customer</option>
+                      </select>
+                    
+                    </div>
+                    
+                    
+                    
+                    
+                  </div>
+                  <!-- /.card-body -->
+  
+                  <div class="card-footer">
+                    <a href="system_user.html" type="submit" class="btn btn-primary">Add Data</a>
+                    <a href="system_user.html" type="submit" class="btn btn-danger">Cancel</a>
+                  </div>
+                </form>
               </div>
-            </div>
+              <!-- /.card -->
             
-          </div>
-          <div class="row mt-4">
-                  <div class="col-md-12">
-              <div class="card">
-                
-                <div class="card-body">
-                  <canvas id="revenueChart"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div><!-- /.container-fluid -->
-    </section>
+  
+              
 
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="card">
-                
-                <div class="card-body">
-                  <canvas id="salesVolumeChart2"></canvas>
-                </div>
-              </div>
+
+
+
+
+             
+              <!-- /.card -->
+  
             </div>
             
+            <!--/.col (right) -->
           </div>
-          <div class="row mt-4">
-                  <div class="col-md-12">
-              <div class="card">
-                
-                <div class="card-body">
-                  <canvas id="revenueChart2"></canvas>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+          <!-- /.row -->
         </div><!-- /.container-fluid -->
-    </section>
-      
+      </section>
+
+      </div>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -348,7 +362,6 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
 
 <!-- jQuery -->
 <script src="../plugins/jquery/jquery.min.js"></script>
@@ -384,91 +397,5 @@
 <script src="../dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard.js"></script>
-
-<script>
-  // Sales volume by product chart
-  var salesVolumeChart = new Chart(document.getElementById("salesVolumeChart"), {
-    type: 'bar',
-    data: {
-      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-      datasets: [{
-        label: "Cement Items",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-        data: [5000, 3000, 1000, 5000, 200, 6000]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Incoming Stocks'
-      }
-    }
-  });
-
-  // Revenue by product chart
-  var revenueChart = new Chart(document.getElementById("revenueChart"), {
-    type: 'pie',
-    data: {
-      labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-      datasets: [{
-        label: "Revenue",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-        data: [5000, 3000, 1000, 5000, 200, 6000]
-      }]
-    },
-    options: {
-      title: {
-        display: true,
-        text: 'Incoming Stocks'
-      }
-    }
-  });
-
-</script>
-
-
-<script>
-    // Sales volume by product chart
-    var salesVolumeChart = new Chart(document.getElementById("salesVolumeChart2"), {
-      type: 'bar',
-      data: {
-        labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-        datasets: [{
-          label: "Cement Items",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-          data: [500, 300, 100, 500, 200, 600]
-        }]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Outgoing Stocks'
-        }
-      }
-    });
-  
-    // Revenue by product chart
-    var revenueChart = new Chart(document.getElementById("revenueChart2"), {
-      type: 'pie',
-      data: {
-        labels: ["JB Union Extra Strength", "JB Union Super Strength", "JB Union Ultra Strength", "SB Union Extra Strength", "SB Union Super Strength", "SB Union Ultra Strength"],
-        datasets: [{
-          label: "Revenue",
-          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f", "#e8c3b9", "#c45850", "#3e8ecd"],
-          data: [500, 300, 100, 500, 200, 600]
-        }]
-      },
-      options: {
-        title: {
-          display: true,
-          text: 'Outgoing Stocks'
-        }
-      }
-    });
-  
-  </script>
-
-
-
 </body>
 </html>
