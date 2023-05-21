@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Warehouse | Update Outgoing Stocks</title>
+  <title>Warehouse | Add Outgoing Stocks</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -281,6 +281,11 @@
                 <!-- form start -->
                 <form>
                   <div class="card-body">
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Delivery Receipt #</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="1221">
+                    </div>
                     
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Customer</label>
@@ -308,14 +313,26 @@
                       </select>
                     
                     </div>
+            
+
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Quality</label>
-                      <input type="text" class="form-control" placeholder="1,000">
+                      <label for="exampleInputEmail1">Number of Bags</label>
+                      <input type="text" class="form-control" placeholder="100">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Name of Driver</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Truck Plate Number</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ABC 1234">
                     </div>
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <a href="outgoing.html" type="submit" class="btn btn-primary">Add Data</a>
+                    <a href="outgoing.html" type="submit" class="btn btn-primary">Update Data</a>
                     <a href="outgoing.html" type="submit" class="btn btn-danger">Cancel</a>
                   </div>
                 </form>

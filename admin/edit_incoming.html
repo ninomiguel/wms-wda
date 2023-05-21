@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Warehouse | Update Incoming Stocks</title>
+  <title>Warehouse | Add Incoming Stocks</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -253,8 +253,8 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Update Incoming Stock</h1>
+          <div class="col-sm-12">
+            <h1 class="m-0">Warehouse Transfer Receipt - Cement</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -281,6 +281,11 @@
                 <!-- form start -->
                 <form>
                   <div class="card-body">
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">WTR #</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="1001">
+                    </div>
                     
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Supplier</label>
@@ -294,7 +299,7 @@
                     <div class="form-group">
                       <label for="exampleFormControlSelect1">Stock</label>
                       <select class="form-control" id="exampleFormControlSelect1">
-                        <option> 	Union Ultra Strength 50 Jumbo Bag Type 1</option>
+                        <option>Union Ultra Strength 50 Jumbo Bag Type 1</option>
                         <option>Union Super Strength 40 Jumbo Bag Type 1P</option>
                         <option>Union Extra Strength 40 Jumbo Bag Type 1P</option>
                         <option>Union Super Strength 40 Sling Bag Type 1P</option>
@@ -304,14 +309,24 @@
                     
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Quality</label>
+                      <label for="exampleInputEmail1">Number of Bags</label>
                       <input type="text" class="form-control" placeholder="1,000">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Name of Driver</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John Doe">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Truck Plate Number</label>
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ABC 1234">
                     </div>
                   <!-- /.card-body -->
   
                   <div class="card-footer">
-                    <a href="stock_detail.html" type="submit" class="btn btn-primary">Update Data</a>
-                    <a href="stock_detail.html" type="submit" class="btn btn-danger">Cancel</a>
+                    <a href="incoming.html" type="submit" class="btn btn-primary">Update Data</a>
+                    <a href="incoming.html" type="submit" class="btn btn-danger">Cancel</a>
                   </div>
                 </form>
               </div>

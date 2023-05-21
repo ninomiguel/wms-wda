@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Warehouse | Stock List</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Warehouse | Stocks List</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -166,7 +169,7 @@
                 </a>
               </li>
               <!-- <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="all_stock.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Stocks</p>
                 </a>
@@ -197,7 +200,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="all_report.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Stocks</p>
                 </a>
@@ -220,18 +223,18 @@
                   <p>Supplier</p>
                 </a>
               </li> -->
-              <!-- <li class="nav-item">
+              <li class="nav-item">
                 <a href="customer.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Customer</p>
                 </a>
-              </li> -->
-              <li class="nav-item">
+              </li>
+              <!-- <li class="nav-item">
                 <a href="system_user.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>System Users</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
           </li>
 
@@ -258,8 +261,8 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Information About Stocks</a></li>
-              <li class="breadcrumb-item active">Stock</li>
+              
+              <!-- <li class="breadcrumb-item"><a href="add_stock_detail.html" class="btn btn-primary btn-lg"><i class="fa-regular fa-square-plus"></i>&nbsp;&nbsp; Add Stock</a></li> -->
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -276,9 +279,12 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">View Stocks Data</h3>
+
   
                   <div class="card-tools">
+                
                     <div class="input-group input-group-sm" style="width: 150px;">
+                      
                       <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
   
                       <div class="input-group-append">
@@ -286,6 +292,8 @@
                           <i class="fas fa-search"></i>
                         </button>
                       </div>
+
+                      
                     </div>
                   </div>
                 </div>
@@ -297,8 +305,9 @@
                         <th>ID</th>
                         <th>Description</th>
                         <th>Type</th>
-                        <th>Stock</th>
+                        <th>Total of Bags</th>
                         <th>Date</th>
+                       
                       </tr>
                     </thead>
                     <tbody>
@@ -306,54 +315,61 @@
                         <td>1</td>
                         <td>Union Ultra Strength 50</td>
                         <td>Jumbo Bag Type 1</td>
-                        <td><span class="tag tag-success">1,000</span></td>
+                        <td><h3><span class="badge bg-success">1,000</span></h3></td>
+                        
                         <td>Created: 17 May 2023 21:03
                             <br>
                             Last modified: 17 May 2023 21:03</td>
+                        
                       </tr>
                       <tr>
                         <td>2</td>
                         <td>Union Super Strength 40</td>
                         <td>Jumbo Bag Type 1P</td>
-                        <td><span class="tag tag-warning">3,000</span></td>
+                        <td><h3><span class="badge bg-success">3,000</span></h3></td>
                         <td>Created: 17 May 2023 21:01
                             <br>
                             Last modified: 17 May 2023 21:01</td>
+                        
                       </tr>
                       <tr>
                         <td>3</td>
                         <td>Union Extra Strength 40</td>
                         <td>Jumbo Bag Type 1P</td>
-                        <td><span class="tag tag-primary">5,000</span></td>
+                        <td><h3><span class="badge bg-success">5,000</span></h3></td>
                         <td>Created: 17 May 2023 21:00
                             <br>
                             Last modified: 17 May 2023 21:00</td>
+                        
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>Union Super Strength 40</td>
                         <td>Sling Bag Type 1P</td>
-                        <td><span class="tag tag-danger">2,000</span></td>
+                        <td><h3><span class="badge bg-success">2,000</span></h3></td>
                         <td>Created: 17 May 2023 21:04
                             <br>
                             Last modified: 17 May 2023 21:19</td>
+                        
                       </tr>
                       <tr>
                         <td>5</td>
                         <td>Union Extra Strength 40</td>
                         <td>Sling Bag Type 1P</td>
-                        <td><span class="tag tag-danger">5,000</span></td>
+                        <td><h3><span class="badge bg-success">5,000</span></h3></td>
                         <td>Created: 17 May 2023 21:02
                             <br>
                             Last modified: 17 May 2023 21:02</td>
+                        
                       </tr>
                       <tr>
                         <td>6</td>
                         <td>Union Ultra Strength 50</td>
                         <td>Sling Bag Type 1</td>
-                        <td><span class="tag tag-danger">6,000</span></td>
+                        <td><h3><span class="badge bg-success">6,000</span></h3></td>
                         <td>Created: 17 May 2023 20:57 <br>
                             Last modified: 17 May 2023 20:57</td>
+                        
                       </tr>
                     </tbody>
                   </table>
