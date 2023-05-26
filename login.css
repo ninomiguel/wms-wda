@@ -10,7 +10,7 @@
       justify-content: center;
       align-items: center;
       letter-spacing: 1px;
-      background-color: #0c1022;
+      background: linear-gradient(90deg, #921a1f 0%, #355126 100%);
   }
   .login_form_container{
       position: relative;
@@ -18,7 +18,7 @@
       height: 470px;
       max-width: 400px;
       max-height: 470px;
-      background: #040717;
+      background: #fff;
       border-radius: 50px 5px;
       display: flex;
       align-items: center;
@@ -32,7 +32,7 @@
       width: 170%;
       height: 170%;
       content: '';
-      background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+      background-image: conic-gradient(transparent, transparent, transparent, #921a1f);
       animation: rotate_border 6s linear infinite;
   
   }
@@ -42,7 +42,7 @@
       width: 170%;
       height: 170%;
       content: '';
-      background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+      background-image: conic-gradient(transparent, transparent, transparent, #355126);
       animation: rotate_border 6s linear infinite;
       animation-delay: -3s;
   }
@@ -57,12 +57,12 @@
   .login_form{
       position: absolute;
       content: '';
-      background-color: #0c1022;
+      background-color: #fff;
       border-radius: 50px 5px;
       inset: 5px;
       padding: 50px 40px;
       z-index: 10;
-      color: #00ccff;
+      color: #355126;
   
   } 
   h2{
@@ -83,15 +83,15 @@
       background: transparent;
       border: none;
       outline: none;
-      border-bottom: 1px solid #00ccff;
+      border-bottom: 1px solid #355126;
       font-size: 20px;
       padding-left: 10px;
-      color: #00ccff;
+      color: #355126;
   
   }
   ::placeholder{
       font-size: 15px;
-      color: #00ccff52;
+      color: #35512652;
       letter-spacing: 1px;
   
   }
@@ -117,7 +117,7 @@
       cursor: pointer;
       font-size: 22px;
       letter-spacing: 2px;
-      border: 1px solid #00ccff;
+      border: 1px solid #355126;
       border-radius: 50px;
       background-color: #0c1022;
       display: flex;
@@ -136,7 +136,7 @@
       font-size: 18px;
   }
   .glowIcon {
-      text-shadow: 0 0 10px #00ccff;
+      text-shadow: 0 0 10px #355126;
   
   }
 
@@ -151,18 +151,20 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 } */
+
+
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #23242a;
+    background: linear-gradient(90deg, #921a1f 0%, #355126 100%);
     }
     .box{
         position: relative;
         width: 380px;
         height: 420px;
-        background: #1c1c1c;
+        /* background: #1c1c1c; */
         border-radius: 8px;
         overflow: hidden;
     }
@@ -173,8 +175,8 @@ body{
         left:-50% ;
         width: 320px;
         height: 420px;
-        background:linear-gradient(0deg,transparent,#45f3ff,
-        transparent,#45f3ff) ;
+        background:linear-gradient(0deg,transparent,#355126,
+        transparent,#355126) ;
         transform-origin: bottom right;
         animation: animate 6s linear infinite;
     }
@@ -185,8 +187,8 @@ body{
         left:-50% ;
         width: 320px;
         height: 420px;
-        background:linear-gradient(10deg,transparent,#ee00ff,
-        transparent,#ee00ff) ;
+        background:linear-gradient(10deg,transparent,#921a1f,
+        transparent,#921a1f) ;
         transform-origin: bottom right;
         animation: animate 6s linear infinite;
         animation-delay: -3s;
@@ -204,14 +206,14 @@ body{
         position:absolute;
         inset: 2px;
         border-radius: 8px;
-        background: #28292d;
+        background: #fff;
         z-index: 10;
 		padding:50px 40px;
 		display: flex;
 		flex-direction: column;
     }
 	.form h2{
-		color: #45f3ff;
+		color: #355126;
 		font-weight: 500;
 		text-align: center;
 		letter-spacing: 0.1em;
@@ -230,7 +232,7 @@ body{
 	background: transparent;
 	border: none;
 	outline: none;
-	color: #23242a;
+	color: #fff;
 	font-size: 1em;
 	letter-spacing: 0.05em;
 	z-index: 10;
@@ -249,7 +251,7 @@ body{
 .inputbox input:valid ~ span,
 .inputbox input:focus ~ span
 {
-	color: #45f3ff;
+	color: #355126;
 	transform:translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
@@ -259,7 +261,7 @@ body{
 	bottom: 0;
 	width: 100%;
 	height: 2px;
-	background: #45f3ff;
+	background: #355126;
 	border-radius: 4px;
 	transition: 0.5s;
 	pointer-events: none;
@@ -282,13 +284,13 @@ body{
 }
 .links a:hover,
 .links a:nth-child(2){
-	color: #ee00ff;
+	color: #921a1f;
 }
 .input
 {
 	border: none;
 	outline: none;
-	background: #45f3ff;
+	background: #355126;
 	padding: 11px 25px;
 	width: 500px;
 	margin-top: 10px;
